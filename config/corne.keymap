@@ -24,7 +24,7 @@
 
             bindings = <
 &kp TAB    &kp Q       &kp W           &kp E               &kp R             &kp T          &kp Y        &kp U             &kp I                &kp O            &kp P               &kp BSPC
-&kp LCTRL  &mt LGUI A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G          &kp H        &mt J LEFT_SHIFT  &mt K RIGHT_CONTROL  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp SQT
+&kp LCTRL  &mt LGUI A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G          &kp H        &mt J LEFT_SHIFT  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp SQT
 &kp LSHFT  &kp Z       &kp X           &kp C               &kp V             &kp B          &kp N        &kp M             &kp COMMA            &kp DOT          &kp FSLH            &kp ESC
                                        &lt 3 ESCAPE        &lt 1 TAB         &lt 2 SPACE    &lt 5 ENTER  &lt 4 BACKSPACE   &lt 6 DEL
             >;
@@ -43,7 +43,7 @@
 &kp TAB    &none     &none     &none      &none      &none        &kp K_REDO  &kp K_PASTE    &kp K_COPY  &kp K_CUT  &kp K_UNDO    &kp BSPC
 &none      &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none        &kp LEFT    &kp DOWN       &kp UP      &kp RIGHT  &kp CAPSLOCK  &none
 &kp LSHFT  &none     &none     &none      &none      &none        &kp INSERT  &kp PAGE_DOWN  &kp PG_UP   &kp HOME   &kp END       &kp ESC
-                               &kp LGUI   &trans     &kp SPACE    &kp RET     &trans         &kp RALT
+                               &kp LGUI   &trans     &kp SPACE    &kp RET     &kp BACKSPACE  &kp DELETE
             >;
 
             label = "NAV";
@@ -54,7 +54,7 @@
 &none  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_CUT  &kp K_REDO    &kp K_REDO      &kp K_PASTE     &kp K_COPY    &kp K_CUT        &kp K_UNDO  &kp BSPC
 &none  &kp LGUI    &kp LALT   &kp LCTRL   &kp LSHFT  &none         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none       &none
 &none  &none       &none      &none       &none      &none         &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none       &kp ESC
-                              &kp LGUI    &trans     &kp SPACE     &kp RET         &trans          &kp RALT
+                              &kp LGUI    &trans     &kp SPACE     &mkp RCLK       &mkp LCLK       &mkp MCLK
             >;
 
             label = "MOUSE";
@@ -62,10 +62,10 @@
 
         MEDIA {
             bindings = <
-&none  &none     &none     &none      &none      &none    &none              &none           &none         &none            &none       &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &ext_power EP_TOG  &kp K_PREVIOUS  &kp K_VOL_DN  &kp K_VOLUME_UP  &kp K_NEXT  &none
-&none  &none     &none     &none      &none      &none    &out OUT_TOG       &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_CLR  &none
-                           &none      &none      &none    &none              &none           &none
+&none  &none     &none     &none      &none      &none    &none              &none             &none         &none            &none       &none
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &ext_power EP_TOG  &kp K_PREVIOUS    &kp K_VOL_DN  &kp K_VOLUME_UP  &kp K_NEXT  &none
+&none  &none     &none     &none      &none      &none    &out OUT_TOG       &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_CLR  &none
+                           &none      &none      &none    &kp K_STOP         &kp K_PLAY_PAUSE  &kp K_MUTE
             >;
 
             label = "MEDIA";
@@ -73,10 +73,10 @@
 
         NUM {
             bindings = <
-&none  &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT     &none  &none      &none      &none     &none     &none
-&none  &kp SEMI   &kp N4  &kp N5  &kp N6  &kp EQUAL    &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&none  &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH     &none  &none      &none      &none     &none     &none
-                          &none   &none   &none        &none  &none      &none
+&none  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &none      &none      &none     &none     &none
+&none  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+&none  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none  &none      &none      &none     &none     &none
+                          &kp DOT  &kp N0  &kp MINUS    &none  &none      &none
             >;
 
             label = "NUMBER";
