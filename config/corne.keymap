@@ -13,11 +13,12 @@
 
 / {
     behaviors {
-        mt_balanced: mt_balanced {
+        mt: mt {
             compatible = "zmk,behavior-mod-tap";
             flavor = "balanced";
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
 
