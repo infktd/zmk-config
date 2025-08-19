@@ -12,6 +12,12 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    behaviors {
+        mt_balanced: mt_balanced {
+            compatible = "zmk,behavior-mod-tap";
+            flavor = "balanced";
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
